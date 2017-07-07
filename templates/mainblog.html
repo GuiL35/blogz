@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>Build the Blog</h1>
+    <!-- Use a query here to get all of the blogs in the table. Call the list "blogs"-->
+
+
+    {% for blogs in blog %}
+        <h2><a href = "/blog?id={{blogs.id}}">{{blogs.title}}</a></h2>
+        <p>{{blogs.content}}</p>
+    {% endfor %}
+
+    <!--End of Suzanne's Example,/newroute?id={{blog.id}}-->
+
+    
+{% endblock %}

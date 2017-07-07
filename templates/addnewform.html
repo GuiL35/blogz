@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>Add a Blog Entry</h1>
+    <form action="/pushtoDB", method='post'>
+        <label>
+            Title for your new blog:
+            <br>
+            <input type="text" name='title' /> 
+        </label>
+
+        <br></br>
+        <label>
+            The content of your new blog:
+            <br>
+            <textarea type="text" name="content"></textarea>
+            <br/>
+        </label>
+
+        <input type="submit" value="Add Entry" />
+    </form>
+
+    <hr />
+
+    <!--{% if title|length > 10 or title|length == 0 %}
+        <p>please enter a valid title and content</p>
+    {% elif content|length < 100 or content|length == 0 %}
+        <p>please enter a valid title and content</p>
+    {% endif %}-->
+
+{% endblock %}
+
